@@ -40,9 +40,8 @@
     </div>
 
     <script>
-        // Function to fetch dashboard data from your Flask API
         function fetchDashboardData(day) {
-            const url = `http://app.park-room.de/dashboard_data?day=${day}`;  // Use http if HTTPS is not needed
+            const url = `https://sh7el96ofl.execute-api.eu-north-1.amazonaws.com/default/parkRoomDataFunction?day=${day}`;
 
             fetch(url)
                 .then(response => response.json())
@@ -59,7 +58,6 @@
                 });
         }
 
-        // Function to display the bookings in the HTML table
         function displayBookings(bookings) {
             let html = `
                 <table>
